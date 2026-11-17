@@ -4,16 +4,21 @@ Aventura histórica 2D ilustrada, pensada para navegador y celulares.
 
 ## Estado actual
 
-**Prototipo jugable inicial.** Incluye:
+**Prototipo jugable ampliado, con enfoque mobile-first.** Incluye:
 - Creación básica del viajero: nombre, apariencia y color de ropa.
 - Mundo explorable dibujado en Canvas 2D.
-- Movimiento con teclado y joystick táctil.
+- Movimiento con teclado, joystick táctil y botón de carrera.
+- Interfaz móvil adaptable a vertical/horizontal y áreas seguras de pantalla.
+- HUD de época, hora y región actual.
 - Personajes no jugadores con conversaciones.
-- Objetos y lugares investigables.
+- Objetos y lugares investigables, mochila y diario.
+- Tres etapas con tres pistas cada una y desbloqueo secuencial.
+- Regiones visitadas, reloj de juego y ambiente nocturno.
 - Descubrimientos y diario de viaje.
 - Tres capas temporales de prueba.
 - Interfaz adaptable a escritorio y móvil.
-- Guardado local del progreso al salir de la página.
+- Guardado automático local, exportación/importación de partida y reinicio confirmado.
+- Estructura modular separada en HTML, CSS, datos y motor JavaScript.
 
 ## Cómo jugar
 
