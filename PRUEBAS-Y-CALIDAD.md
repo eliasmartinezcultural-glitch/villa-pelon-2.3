@@ -45,5 +45,9 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [x] Reloj de mundo que avanza aunque el jugador esté quieto.
 - [x] Calendario de días guardado en la partida.
 - [x] Capa de clima/estación lúdica y determinista (no meteorología real).
+- [x] Energía de carrera, recuperación al caminar y descanso contextual.
+- [x] Tarea diaria en el galpón con recompensa y límite por día.
+- [x] Reinicio de tarea y recuperación parcial de energía al cambiar de día.
+- [x] Compatibilidad de energía/calendario con partidas guardadas antiguas.
 - [ ] Verificar rutinas y accesibilidad con usuarios reales en Android/iPhone.
 - [ ] Probar cambios de día, importación de partidas antiguas y guardado tras varios ciclos.
