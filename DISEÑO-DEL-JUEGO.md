@@ -47,7 +47,7 @@ La dirección artística es de cuaderno ilustrado: formas cálidas, vegetación,
 - Regiones explorables con registro de zonas visitadas.
 - Personajes no jugadores con diálogos de ambientación.
 - Objetos investigables, hallazgos y mochila.
-- Tres etapas temporales de prueba con tres pistas por etapa.
+- Tres etapas temporales de prueba con tres pistas por etapa y cambios visibles del paisaje.
 - Desbloqueo secuencial: presente → transformación → paisaje anterior.
 - Reloj de juego y tinte nocturno.
 - Diario, mapa, ayuda y progreso de etapa.
@@ -101,4 +101,4 @@ La partida se guarda en el dispositivo del jugador mediante almacenamiento local
 
 ## Limitaciones actuales
 
-El mundo todavía es una maqueta procedural, no una reconstrucción cartográfica real. Los personajes son estáticos y sus diálogos son ficticios. El reloj y la iluminación son una primera capa de ambiente. El prototipo debe probarse en dispositivos reales antes de considerarse estable para publicación.
+El mundo todavía es una maqueta procedural, no una reconstrucción cartográfica real. En la etapa de transformación aparecen trazas ilustrativas de infraestructura de agua; en el paisaje anterior se reducen las construcciones y las hileras de cultivo. Son cambios visuales ficticios, no reconstrucciones de fechas o sitios reales. Los personajes son estáticos y sus diálogos son ficticios. El reloj y la iluminación son una primera capa de ambiente. El prototipo debe probarse en dispositivos reales antes de considerarse estable para publicación.
