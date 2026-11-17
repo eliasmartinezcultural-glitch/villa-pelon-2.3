@@ -46,6 +46,14 @@ Ver `HISTORIA-Y-FUENTES.md`.
 5. Incorporar sonido, animaciones y arte final original.
 6. Probar rendimiento, accesibilidad, guardado y funcionamiento sin conexión en celulares.
 
-## Tecnología
+## Estructura técnica
+
+- `index.html`: estructura y pantallas de entrada.
+- `styles.css`: diseño adaptable y controles móviles.
+- `game-data.js`: épocas, personajes, pistas y elementos del mundo.
+- `game.js`: motor Canvas, movimiento, colisiones, misiones, interfaz y guardado.
+- `manifest.webmanifest`, `sw.js`, `icon.svg`: instalación y recursos offline.
+- `DISEÑO-DEL-JUEGO.md`: arquitectura y hoja de ruta.
+- `HISTORIA-Y-FUENTES.md`: criterio de verificación histórica.
 
 HTML, CSS y JavaScript sin dependencias externas. Renderizado Canvas 2D. Publicación estática posible mediante GitHub Pages.
