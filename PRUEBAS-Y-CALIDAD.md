@@ -51,3 +51,10 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [x] Compatibilidad de energía/calendario con partidas guardadas antiguas.
 - [ ] Verificar rutinas y accesibilidad con usuarios reales en Android/iPhone.
 - [ ] Probar cambios de día, importación de partidas antiguas y guardado tras varios ciclos.
+
+- [x] Catálogo de misiones encadenadas separado del motor.
+- [x] Progreso, bloqueos y recompensas de misiones persistentes.
+- [x] Conversaciones con progreso de vínculo limitado a una vez por día.
+- [x] Pantalla de misiones y vínculos accesible desde la interfaz.
+- [ ] Probar todas las cadenas de misiones con una partida nueva y una partida importada.
+- [ ] Probar recompensas únicas, límite diario de vínculo y cambios de día en móvil.
