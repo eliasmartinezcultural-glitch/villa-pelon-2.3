@@ -15,7 +15,7 @@ Aventura histórica 2D ilustrada, pensada para navegador y celulares.
 - Tres etapas con tres pistas cada una y desbloqueo secuencial.
 - Regiones visitadas, reloj de juego y ambiente nocturno.
 - Descubrimientos y diario de viaje.
-- Tres capas temporales de prueba.
+- Tres capas temporales de prueba con cambios visuales del paisaje entre épocas.
 - Interfaz adaptable a escritorio y móvil.
 - Guardado automático local, exportación/importación de partida y reinicio confirmado.
 - Estructura modular separada en HTML, CSS, datos y motor JavaScript.
