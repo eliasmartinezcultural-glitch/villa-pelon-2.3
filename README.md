@@ -9,10 +9,12 @@ Aventura histórica 2D ilustrada, pensada para navegador y celulares.
 - Mundo explorable dibujado en Canvas 2D.
 - Movimiento con teclado, joystick táctil y botón de carrera.
 - Interfaz móvil adaptable a vertical/horizontal y áreas seguras de pantalla.
+- Sprites SVG originales dibujados para viajero, habitantes, casas, galpón, árbol, pozo y mesa.
 - HUD de época, hora y región actual.
 - Personajes no jugadores con conversaciones.
 - Objetos y lugares investigables, mochila y diario.
 - Tres etapas con tres pistas cada una y desbloqueo secuencial.
+- Paisaje que cambia visualmente entre etapas temporales.
 - Regiones visitadas, reloj de juego y ambiente nocturno.
 - Descubrimientos y diario de viaje.
 - Tres capas temporales de prueba con cambios visuales del paisaje entre épocas.
@@ -56,6 +58,7 @@ Ver `HISTORIA-Y-FUENTES.md`.
 - `index.html`: estructura y pantallas de entrada.
 - `styles.css`: diseño adaptable y controles móviles.
 - `game-data.js`: épocas, personajes, pistas y elementos del mundo.
+- `assets/`: ilustraciones SVG originales.
 - `game.js`: motor Canvas, movimiento, colisiones, misiones, interfaz y guardado.
 - `manifest.webmanifest`, `sw.js`, `icon.svg`: instalación y recursos offline.
 - `DISEÑO-DEL-JUEGO.md`: arquitectura y hoja de ruta.
