@@ -4,7 +4,7 @@
 
 Aventura 2D de exploración, ilustrada y dibujada, para celulares. El jugador crea un viajero y recorre distintas capas temporales de San Patricio del Chañar. El objetivo es descubrir cómo se transforma un territorio y aprender su historia jugando.
 
-La dirección artística es de cuaderno ilustrado: formas cálidas, vegetación, caminos, construcciones, objetos destacados y personajes legibles en pantallas pequeñas. La maqueta actual está dibujada con Canvas; todavía no es el arte final.
+La dirección artística es de cuaderno ilustrado: formas cálidas, vegetación, caminos, construcciones, objetos destacados y personajes legibles en pantallas pequeñas. La maqueta combina Canvas con sprites SVG originales dibujados para el viajero, habitantes, casas, galpón, árbol, pozo y mesa. La dirección artística todavía debe ampliarse con escenarios y animaciones finales.
 
 ## Principios no negociables
 
@@ -42,6 +42,7 @@ La dirección artística es de cuaderno ilustrado: formas cálidas, vegetación,
 ## Sistemas implementados en el prototipo
 
 - Personaje inicial configurable (nombre, variante visual y color de ropa).
+- Sprites SVG originales para protagonista, habitantes y elementos principales del escenario.
 - Mapa 2D generado por tiles y cámara que sigue al personaje.
 - Caminos, agua, arboleda, edificios y colisiones.
 - Regiones explorables con registro de zonas visitadas.
