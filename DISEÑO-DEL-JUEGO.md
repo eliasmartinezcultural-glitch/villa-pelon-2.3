@@ -104,3 +104,34 @@ La partida se guarda en el dispositivo del jugador mediante almacenamiento local
 ## Limitaciones actuales
 
 El mundo todavía es una maqueta procedural, no una reconstrucción cartográfica real. En la etapa de transformación aparecen trazas ilustrativas de infraestructura de agua; en el paisaje anterior se reducen las construcciones y las hileras de cultivo. Son cambios visuales ficticios, no reconstrucciones de fechas o sitios reales. Los personajes son estáticos y sus diálogos son ficticios. El reloj y la iluminación son una primera capa de ambiente. El prototipo debe probarse en dispositivos reales antes de considerarse estable para publicación.
+
+ 
+## Segunda capa de diseño: mundo vivo y reglas sistémicas
+
+### Rutinas de habitantes
+Los habitantes ficticios dejan de ser puntos inmóviles: tienen franjas del día, destinos y actividades. Sus posiciones se calculan a partir del reloj del juego, de forma determinista y económica para el teléfono. El jugador puede encontrarlos en distintos lugares y horarios. No se presentan estas rutinas como testimonios ni costumbres históricas reales.
+
+### Tiempo y clima
+El reloj avanza aunque el jugador se quede quieto; el ciclo se conserva en la partida. Se incorpora un calendario de juego y una variación ambiental determinista por día. La estación y el clima son ambientación lúdica, no un registro meteorológico de San Patricio del Chañar.
+
+### Reglas globales de producción
+- El mundo debe responder a la acción del jugador; no agregar sistemas que solo decoren una pantalla.
+- Cada personaje tiene identidad, agenda, función, diálogo y vínculo potencial con misiones.
+- Cada misión debe declarar objetivo, condición de inicio, pasos, recompensa, consecuencia y estado guardado.
+- Cada época debe tener mapa, reglas de desplazamiento, habitantes, objetos, arquitectura y fuentes propias.
+- Las decisiones del jugador pueden cambiar relaciones y relatos ficticios; nunca deben alterar hechos históricos documentados.
+- Todo elemento histórico visible debe indicar DOCUMENTADO, MEMORIA ORAL, RECREACIÓN o PENDIENTE DE VERIFICACIÓN.
+- Los controles principales deben poder usarse con una mano, con botones táctiles amplios y sin depender de gestos precisos.
+- El juego debe tolerar pausas, cambios de orientación, pérdida de conexión y teléfonos modestos.
+- Los textos largos van al diario; durante la exploración se priorizan instrucciones cortas y diálogos breves.
+- Toda mecánica nueva debe tener una prueba de regresión en móvil y escritorio antes de integrarse.
+
+### Próximas capas de simulación
+1. Interacciones contextuales con opciones y consecuencias persistentes.
+2. Misiones secundarias con encargos, recompensas y cadenas de objetivos.
+3. Energía, descanso y trabajos con límites comprensibles; sin castigos que frustren a niños o adultos mayores.
+4. Interiores y edificios con escenas propias, accesibles y conectadas al exterior.
+5. Relaciones con habitantes y memoria personal del protagonista.
+6. Mapa por regiones con conexiones reales del mundo del juego y puntos de interés.
+7. Archivo histórico consultable con fuentes, procedencia, fechas y permisos.
+8. Animación por estados, sonido opcional y ajustes de accesibilidad.
