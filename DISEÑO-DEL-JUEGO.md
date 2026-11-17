@@ -146,3 +146,21 @@ El reloj avanza aunque el jugador se quede quieto; el ciclo se conserva en la pa
 - La energía, el dinero y el progreso se conservan en la partida. Las partidas anteriores reciben valores iniciales compatibles.
 
 Estas mecánicas son una primera simulación ligera. Todavía no representan una economía completa, una jornada laboral histórica ni una simulación social profunda.
+
+
+## Tercera capa: misiones, vínculos y progresión personal
+
+### Misiones encadenadas implementadas
+- Conocer a Amalia: iniciar una conversación con ella.
+- Conocer a Tomás: se habilita después de conocer a Amalia.
+- Archivo de pistas: reunir tres descubrimientos; se habilita tras el primer encuentro.
+- Visitar el galpón: se habilita después de conocer a Tomás.
+- Una jornada de trabajo: completar una tarea del galpón tras visitarlo.
+
+Cada misión tiene identificador, objetivo, condición de desbloqueo, progreso, recompensa y estado. Las recompensas se acreditan una sola vez y quedan guardadas. La pantalla de misiones muestra avance y vínculos. La progresión es lúdica y no constituye información histórica.
+
+### Vínculos con habitantes
+Cada conversación nueva por día de juego suma un punto de relación hasta diez. Los niveles son: sin conocer, buen trato, confianza y amistad. El progreso se guarda por personaje. Repetir conversaciones el mismo día no permite acumular puntos de manera ilimitada.
+
+### Próxima evolución
+La siguiente iteración debe convertir los diálogos en escenas con opciones reales, memoria de decisiones, favores y consecuencias en el mundo; después sumar interiores y actividades por oficio. Evitar sistemas de relación que solo sean barras sin consecuencias.
