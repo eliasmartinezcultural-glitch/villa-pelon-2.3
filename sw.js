@@ -1,5 +1,5 @@
-const CACHE='viajero-chanar-v5';
-const FILES=['./','./index.html','./styles.css','./game-data.js','./game.js','./manifest.webmanifest','./icon.svg','./assets/hero.svg','./assets/amalia.svg','./assets/tomas.svg','./assets/rosa.svg','./assets/house.svg','./assets/barn.svg','./assets/tree.svg','./assets/well.svg','./assets/table.svg'];
+const CACHE='viajero-chanar-v6';
+const FILES=['./','./index.html','./styles.css','./game-data.js','./world-systems.js','./game.js','./manifest.webmanifest','./icon.svg','./assets/hero.svg','./assets/amalia.svg','./assets/tomas.svg','./assets/rosa.svg','./assets/house.svg','./assets/barn.svg','./assets/tree.svg','./assets/well.svg','./assets/table.svg'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
