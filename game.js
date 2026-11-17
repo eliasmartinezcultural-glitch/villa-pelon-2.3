@@ -61,6 +61,21 @@ function registerMissionEvent(type,target){
  }
  persist();
 }
+function syncMissionHistory(){
+ normalizeProgressState();
+ for(let pass=0;pass<missionCatalog.length;pass++){
+  for(const m of missionCatalog){
+   if(state.completedMissions.includes(m.id)||(m.requires||[]).some(id=>!state.completedMissions.includes(id)))continue;
+   let historical=0;
+   if(m.event==='discover')historical=state.discoveries.length;
+   if(m.event==='visit')historical=state.placesVisited.includes(m.target)?1:0;
+   if(m.event==='work')historical=Math.max(state.totalJobsCompleted||0,state.dailyWorkCount||0);
+   if(m.event==='talk')historical=state.relationships[m.target]?.talks||0;
+   state.missionProgress[m.id]=Math.max(missionProgressValue(m),Math.min(m.goal,historical));
+   if(state.missionProgress[m.id]>=m.goal)completeMission(m);
+  }
+ }
+}
 function relationshipFor(name){
  normalizeProgressState();
  if(!state.relationships[name])state.relationships[name]={points:0,talks:0,lastDay:0};
@@ -70,7 +85,7 @@ function relationshipLevel(points){return points>=6?'Amistad':points>=3?'Confian
 function talkTo(n){
  const rel=relationshipFor(n.name),today=state.worldDay||1;
  const fresh=rel.lastDay!==today;
- if(fresh){rel.points=Math.min(10,rel.points+1);rel.talks++;rel.lastDay=today;registerMissionEvent('talk',n.name)}
+ if(fresh){rel.points=Math.min(10,rel.points+1);rel.talks++;rel.lastDay=today;registerMissionEvent('talk',n.name);syncMissionHistory()}
  const level=relationshipLevel(rel.points);
  const line=rel.points>=6?'Te saluda con confianza.':rel.points>=3?'Se nota que ya hay cierta confianza.':'Cada encuentro ayuda a conocerse.';
  const extra=fresh?' Hoy compartieron una conversación y el vínculo creció.':' Ya conversaron hoy; podés volver mañana para seguir construyendo el vínculo.';
@@ -78,7 +93,7 @@ function talkTo(n){
  persist();
 }
 function openMissions(){
- normalizeProgressState();
+ syncMissionHistory();
  const cards=missionCatalog.map(m=>{
   const done=state.completedMissions.includes(m.id),locked=(m.requires||[]).some(id=>!state.completedMissions.includes(id)),value=missionProgressValue(m);
   const status=done?'Completada':locked?'Bloqueada':'En curso',progress=done?m.goal:value;
