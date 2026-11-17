@@ -15,6 +15,7 @@ Este archivo separa las verificaciones hechas sobre el código de las que todav�
 - [x] Los árboles se dibujan solo en la zona visible.
 - [x] Los objetos investigables de las tres etapas tienen identificadores únicos.
 - [x] Sprites SVG originales integrados con alternativa vectorial si no cargan.
+- [x] Casas, galpón, pozo y mesa tienen interacción contextual.
 - [x] La progresión temporal exige completar las pistas de cada etapa.
 - [x] El guardado contempla mochila, regiones y reloj.
 - [x] Existe exportación e importación de respaldo JSON.
