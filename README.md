@@ -14,6 +14,8 @@ Aventura histórica 2D ilustrada, pensada para navegador y celulares.
 - Habitantes ficticios con rutinas horarias y posiciones dinámicas.
 - Reloj continuo, calendario de días, clima y estación ambientales deterministas.
 - Energía de carrera, descanso y una tarea diaria sencilla con recompensa.
+- Misiones encadenadas con objetivos, desbloqueos y premios persistentes.
+- Vínculos con habitantes: conversaciones, puntos de relación y niveles de confianza.
 - Objetos y lugares investigables, mochila y diario.
 - Tres etapas con tres pistas cada una y desbloqueo secuencial.
 - Paisaje que cambia visualmente entre etapas temporales.
@@ -61,6 +63,7 @@ Ver `HISTORIA-Y-FUENTES.md`.
 - `styles.css`: diseño adaptable y controles móviles.
 - `game-data.js`: épocas, personajes, pistas y elementos del mundo.
 - `world-systems.js`: rutinas de habitantes, calendario y clima de ambientación.
+- `progression-data.js`: catálogo de misiones y reglas de progresión.
 - `assets/`: ilustraciones SVG originales.
 - `game.js`: motor Canvas, movimiento, colisiones, misiones, interfaz y guardado.
 - `manifest.webmanifest`, `sw.js`, `icon.svg`: instalación y recursos offline.
