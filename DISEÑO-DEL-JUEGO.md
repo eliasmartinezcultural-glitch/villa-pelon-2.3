@@ -135,3 +135,14 @@ El reloj avanza aunque el jugador se quede quieto; el ciclo se conserva en la pa
 6. Mapa por regiones con conexiones reales del mundo del juego y puntos de interés.
 7. Archivo histórico consultable con fuentes, procedencia, fechas y permisos.
 8. Animación por estados, sonido opcional y ajustes de accesibilidad.
+
+
+### Mecánicas de vida cotidiana ya integradas en esta iteración
+- El reloj avanza durante la partida y no depende de que el personaje camine.
+- Los habitantes ficticios cambian de ubicación según franjas horarias; dibujo e interacción consultan la misma rutina.
+- El calendario avanza por días; el cambio de día reinicia la tarea laboral diaria y recupera parte de la energía.
+- Correr consume energía; caminar permite recuperarla gradualmente.
+- La mesa permite descansar; el galpón ofrece una tarea ficticia diaria con recompensa pequeña; el pozo permite una pausa breve.
+- La energía, el dinero y el progreso se conservan en la partida. Las partidas anteriores reciben valores iniciales compatibles.
+
+Estas mecánicas son una primera simulación ligera. Todavía no representan una economía completa, una jornada laboral histórica ni una simulación social profunda.
