@@ -55,3 +55,14 @@ button{min-height:42px;touch-action:manipulation;-webkit-tap-highlight-color:tra
  #sprint{width:40px;height:40px;bottom:72px;right:20px}
  #dialogue{bottom:8px;padding:8px 12px}#dialogue p{font-size:12px;margin-bottom:5px}
 }
+
+/* Misiones: tarjetas compactas, legibles y adaptables */
+.mission-card{background:#fbf6e9;border:1px solid #d8cdb8;border-radius:13px;padding:12px;margin:9px 0}
+.mission-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.mission-top b{font-size:14px;color:#465b49}
+.mission-status{font:10px Arial,sans-serif;background:#e8e1d0;color:#59634f;border-radius:20px;padding:4px 7px;white-space:nowrap}
+.mission-card p{font-size:12px;line-height:1.4;margin:7px 0}
+.mission-track{height:7px;border-radius:8px;background:#e1dac9;overflow:hidden;margin:8px 0 5px}
+.mission-track span{display:block;height:100%;background:#7f9874;border-radius:8px}
+.mission-card small{font:11px Arial,sans-serif;color:#777966}
+@media(max-width:380px){.top-actions button{font-size:9px;padding:4px 3px}.brand h1{max-width:95px}}
