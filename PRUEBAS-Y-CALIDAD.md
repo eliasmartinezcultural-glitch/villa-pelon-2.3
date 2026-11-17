@@ -39,3 +39,11 @@ Este archivo separa las verificaciones hechas sobre el código de las que todav�
 ## Publicación
 
 No se considera confirmada la publicación de GitHub Pages hasta abrir la URL desde un dispositivo externo y completar una partida de prueba. La comprobación de sintaxis no reemplaza una prueba de juego real.
+
+- [x] Rutinas horarias deterministas para habitantes ficticios.
+- [x] Posición de los habitantes compartida por dibujo e interacción.
+- [x] Reloj de mundo que avanza aunque el jugador esté quieto.
+- [x] Calendario de días guardado en la partida.
+- [x] Capa de clima/estación lúdica y determinista (no meteorología real).
+- [ ] Verificar rutinas y accesibilidad con usuarios reales en Android/iPhone.
+- [ ] Probar cambios de día, importación de partidas antiguas y guardado tras varios ciclos.
