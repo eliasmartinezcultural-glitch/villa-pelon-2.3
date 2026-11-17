@@ -48,6 +48,7 @@ La dirección artística es de cuaderno ilustrado: formas cálidas, vegetación,
 - Regiones explorables con registro de zonas visitadas.
 - Personajes no jugadores con diálogos de ambientación.
 - Objetos investigables, hallazgos y mochila.
+- Construcciones y puntos del escenario con descripciones e historial de lugares visitados.
 - Tres etapas temporales de prueba con tres pistas por etapa y cambios visibles del paisaje.
 - Desbloqueo secuencial: presente → transformación → paisaje anterior.
 - Reloj de juego y tinte nocturno.
