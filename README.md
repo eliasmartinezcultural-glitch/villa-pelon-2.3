@@ -15,7 +15,7 @@ Aventura histórica 2D ilustrada, pensada para navegador y celulares.
 - Reloj continuo, calendario de días, clima y estación ambientales deterministas.
 - Energía de carrera, descanso y una tarea diaria sencilla con recompensa.
 - Misiones encadenadas con objetivos, desbloqueos y premios persistentes.
-- Vínculos con habitantes: conversaciones, puntos de relación y niveles de confianza.
+- Vínculos con habitantes: conversaciones ramificadas, tres temas por personaje, memoria de temas y niveles de confianza.
 - Objetos y lugares investigables, mochila y diario.
 - Tres etapas con tres pistas cada una y desbloqueo secuencial.
 - Paisaje que cambia visualmente entre etapas temporales.
