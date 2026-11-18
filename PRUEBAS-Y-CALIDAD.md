@@ -138,3 +138,13 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [x] Migración de estado y sincronización de misiones al cargar.
 - [ ] Probar movimiento táctil y cosecha en dispositivo físico.
 - [ ] Medir fluidez en teléfonos de gama baja.
+
+
+## v15 — auditoría estática posterior a la integración
+- [x] Sintaxis JavaScript comprobada para game.js, game-data.js, world-systems.js, progression-data.js y sw.js.
+- [x] Referencias estáticas del motor verificadas contra IDs del documento: sin faltantes.
+- [x] IDs HTML duplicados: ninguno.
+- [x] Los 3 cultivos, 3 épocas, 8 apariciones de NPC y 11 misiones están presentes en los datos cargados.
+- [x] Ciclo de cinco tareas diarias ejecuta sus cinco definiciones.
+- [x] Todos los recursos declarados para precarga del service worker existen en el repositorio.
+- [ ] Prueba de juego real en dispositivos Android/iOS, incluyendo instalación PWA, controles, colisiones, guardado y rendimiento.
