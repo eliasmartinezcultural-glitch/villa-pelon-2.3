@@ -4,4 +4,8 @@ window.ProgressionData={missions:[
 {id:'collect-archive',title:'Armar un pequeño archivo',description:'Reuní tres pistas para empezar a ordenar la memoria del territorio.',event:'discover',target:'*',goal:3,reward:10,requires:['meet-amalia']},
 {id:'visit-barn',title:'Conocer el galpón',description:'Encontrá el galpón de trabajo y explorá este espacio de la maqueta.',event:'visit',target:'Galpón de trabajo',goal:1,reward:5,requires:['meet-tomas']},
 {id:'first-workday',title:'Una jornada compartida',description:'Completá una tarea cotidiana en el galpón.',event:'work',target:'Galpón de trabajo',goal:1,reward:12,requires:['visit-barn']}
+,{id:'open-local-archive',title:'Abrir el archivo del territorio',description:'Entrá al archivo local y descubrí qué datos están documentados y cuáles todavía necesitan investigación.',event:'archive',target:'*',goal:1,reward:5,requires:[]},
+{id:'read-three-records',title:'Leer antes de afirmar',description:'Consultá tres fichas y compará sus períodos, fuentes y niveles de certeza.',event:'archive',target:'*',goal:3,reward:8,requires:['open-local-archive']},
+{id:'travel-between-times',title:'Comparar las capas del tiempo',description:'Visitá dos épocas habilitadas y observá qué cambia en la recreación del paisaje. No confundas la escena con una reconstrucción histórica exacta.',event:'era',target:'*',goal:2,reward:10,requires:['read-three-records']},
+{id:'build-a-local-archive',title:'Construir memoria con fuentes',description:'Reuní cinco fichas del archivo. Cada documento aporta una pieza; ninguna fuente aislada cuenta toda la historia.',event:'archive',target:'*',goal:5,reward:15,requires:['travel-between-times']}
 ]};
