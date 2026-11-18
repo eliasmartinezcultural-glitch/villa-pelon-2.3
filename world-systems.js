@@ -13,7 +13,16 @@ function npcPosition(n,clock){
  const span=Math.max(.01,next.at-current.at),t=Math.max(0,Math.min(1,(hour-current.at)/span));
  return {x:current.x+(next.x-current.x)*t,y:current.y+(next.y-current.y)*t,activity:current.activity};
 }
+
+const workTasks=[
+ {title:'Ordenar herramientas',description:'Separá herramientas, revisá que estén completas y dejá el espacio preparado para la próxima jornada.',reward:5,energy:18},
+ {title:'Preparar cajones',description:'Revisá cajones reutilizables y agrupá los que pueden volver a usarse. Es una tarea ficticia del juego.',reward:6,energy:20},
+ {title:'Revisar el canal de riego',description:'Recorré un tramo ilustrativo del canal y señalá dónde haría falta una limpieza. La escena no representa una obra histórica exacta.',reward:7,energy:22},
+ {title:'Clasificar la cosecha',description:'Separá la fruta ilustrativa por tamaño y estado para comprender una parte de la cadena productiva. Es una recreación lúdica.',reward:8,energy:24},
+ {title:'Acomodar materiales',description:'Agrupá madera, sogas y elementos de trabajo para que puedan encontrarse fácilmente.',reward:6,energy:19}
+];
+function dailyTask(day){return {...workTasks[(Math.max(1,day||1)-1)%workTasks.length]};}
 function npcGreeting(activity,clock){const h=Math.floor((clock||480)/60);if(h<6||h>=22)return 'Parece que está por descansar.';return 'Ahora está '+activity+'.';}
 function climate(day){const seasons=['verano','otoño','invierno','primavera'];const weather=['despejado','ventoso','nublado','soleado','fresco'];const d=Math.max(1,day||1);return {season:seasons[Math.floor((d-1)/7)%4],weather:weather[(d*7+Math.floor(d/3))%weather.length]};}
-return {npcPosition,npcGreeting,climate};
+return {npcPosition,npcGreeting,climate,dailyTask};
 })();
