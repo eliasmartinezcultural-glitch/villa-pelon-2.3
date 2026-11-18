@@ -1,5 +1,5 @@
-const CACHE='viajero-chanar-v7';
-const FILES=['./','./index.html','./styles.css','./game-data.js','./world-systems.js','./progression-data.js','./game.js','./manifest.webmanifest','./icon.svg','./assets/hero.svg','./assets/amalia.svg','./assets/tomas.svg','./assets/rosa.svg','./assets/house.svg','./assets/barn.svg','./assets/tree.svg','./assets/well.svg','./assets/table.svg'];
+const CACHE='viajero-chanar-v8';
+const FILES=['./','./index.html','./styles.css','./game-data.js','./world-systems.js','./progression-data.js','./chanar-archive.js','./game.js','./manifest.webmanifest','./icon.svg','./assets/hero.svg','./assets/amalia.svg','./assets/tomas.svg','./assets/rosa.svg','./assets/house.svg','./assets/barn.svg','./assets/tree.svg','./assets/well.svg','./assets/table.svg'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
