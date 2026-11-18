@@ -116,3 +116,10 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [ ] Completar una cosecha real en navegador móvil.
 - [ ] Verificar persistencia de las tres parcelas tras cerrar y reabrir.
 - [ ] Probar agotamiento y recuperación de agua y semillas.
+
+
+## v13 — compatibilidad
+- [x] Versión de guardado incrementada para la nueva capa de simulación.
+- [x] Objetivos táctiles principales con altura mínima de 44 px en móvil.
+- [x] Caché versionada para forzar la actualización de recursos.
+- [ ] Confirmar actualización del service worker en Android e iOS.
