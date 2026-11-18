@@ -69,3 +69,5 @@ button:focus-visible,input:focus-visible{outline:3px solid #355f8b;outline-offse
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
+
+@media(max-width:760px){#mobile-status{gap:3px}#mobile-resources{font:9px Arial,sans-serif;color:#59634f;white-space:nowrap}}
