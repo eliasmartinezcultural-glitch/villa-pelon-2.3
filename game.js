@@ -35,7 +35,7 @@ function nearestTarget(){let best=null,dist=62;for(const o of objects.filter(o=>
 function say(name,text,cb){state.dialogue={name,text,cb};$('dialogue-name').textContent=name;$('dialogue-text').textContent=text;$('dialogue').style.display='block'}
 function closeDialogue(){if(!state.dialogue)return;let cb=state.dialogue.cb;state.dialogue=null;$('dialogue').style.display='none';if(cb)cb()}
 $('dialogue-next').onclick=closeDialogue;
-function persist(){try{localStorage.setItem('vpt-save',JSON.stringify({...state,visited:[...state.visited],dialogue:null,paused:false,saveVersion:4}));lastSave=performance.now()}catch(e){notify('No se pudo guardar el progreso en este dispositivo.')}}
+function persist(){try{localStorage.setItem('vpt-save',JSON.stringify({...state,visited:[...state.visited],dialogue:null,paused:false,saveVersion:5}));lastSave=performance.now()}catch(e){notify('No se pudo guardar el progreso en este dispositivo.')}}
 
 function normalizeProgressState(){
  state.missionProgress=state.missionProgress&&typeof state.missionProgress==='object'?state.missionProgress:{};
