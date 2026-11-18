@@ -79,3 +79,16 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [ ] Prueba manual en Android de lectura del HUD en 320 px y paisaje.
 - [ ] Completar las cinco variantes de tarea en cinco días de juego.
 - [ ] Verificar el desbloqueo de pregunta especial en partida nueva e importada.
+
+
+## v10 — revisión mobile-first
+- [x] Hoja mobile-first separada y cargada desde el documento principal.
+- [x] Viewport con áreas seguras y adaptación al teclado virtual.
+- [x] Canvas con densidad interna limitada para reducir carga gráfica.
+- [x] Reorganización táctil de controles, diálogo, HUD y paneles.
+- [x] Captura del puntero al correr y liberación al perder foco.
+- [x] Redimensionado ante cambios de tamaño y orientación.
+- [x] Nueva versión de caché offline con la hoja móvil incluida.
+- [ ] Prueba física en Android vertical y horizontal.
+- [ ] Prueba física en iPhone vertical y horizontal.
+- [ ] Prueba de lectura y controles con personas mayores y niños.
