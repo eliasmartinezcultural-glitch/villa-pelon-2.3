@@ -194,3 +194,16 @@ La primera selección documental se apoya en la reseña oficial municipal de ide
 4. La economía es lúdica y no simula salarios ni precios históricos reales.
 5. Los vínculos desbloquean contenido narrativo, no alteran los hechos históricos.
 6. Los mapas de interfaz deben indicar si son esquemáticos o georreferenciados; este mapa es esquemático.
+
+
+## Iteración v10 — diseño desde el celular
+- El teléfono es la plataforma de referencia: el lienzo ocupa el espacio útil completo y el escritorio se considera una adaptación.
+- Se incorpora una hoja de estilos mobile-first independiente para no mezclar correcciones de escritorio con reglas táctiles.
+- Se reorganizan encabezado, controles, HUD, diálogo, paneles y modal de inicio para pantallas estrechas, áreas seguras y orientación horizontal.
+- Los paneles de lectura pasan a ocupar la pantalla en móvil; el diálogo de juego deja despejados joystick y botón de acción.
+- Se añade foco visible, regiones de estado accesibles y respeto por movimiento reducido.
+- El canvas limita su resolución interna a 1,75 veces la densidad del dispositivo para equilibrar nitidez, memoria y batería en móviles.
+- Se refuerza el ciclo de vida: redimensionado, cambio de orientación, pérdida de foco y regreso a segundo plano.
+- La hoja móvil se precarga en la caché offline con una versión nueva.
+
+Esta iteración mejora la base responsive, pero no reemplaza las pruebas físicas en teléfonos Android e iPhone de distintas dimensiones. La compatibilidad debe verificarse en equipos reales antes de publicar.
