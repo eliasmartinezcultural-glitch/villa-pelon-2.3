@@ -164,3 +164,9 @@ Cada conversación nueva por día de juego suma un punto de relación hasta diez
 
 ### Próxima evolución
 La siguiente iteración debe convertir los diálogos en escenas con opciones reales, memoria de decisiones, favores y consecuencias en el mundo; después sumar interiores y actividades por oficio. Evitar sistemas de relación que solo sean barras sin consecuencias.
+
+
+### Conversaciones con opciones y memoria
+La interacción con un habitante abre una conversación con tres temas: el lugar, el trabajo y los recuerdos. Cada tema elegido queda guardado por personaje. Repetir una pregunta no vuelve a premiar el vínculo. Los textos están redactados como ficción y explicitan que no son testimonios ni datos históricos. El nivel de vínculo se refleja en la pantalla de misiones.
+
+La relación es una primera capa narrativa: aún no cambia horarios, rutas ni disponibilidad de misiones por nivel. Esa consecuencia sistémica queda como siguiente hito para evitar una barra decorativa sin efecto real.
