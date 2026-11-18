@@ -207,3 +207,12 @@ La primera selección documental se apoya en la reseña oficial municipal de ide
 - La hoja móvil se precarga en la caché offline con una versión nueva.
 
 Esta iteración mejora la base responsive, pero no reemplaza las pruebas físicas en teléfonos Android e iPhone de distintas dimensiones. La compatibilidad debe verificarse en equipos reales antes de publicar.
+
+
+## Iteración v11 — movimiento y aventura investigativa
+- El personaje principal incorpora una animación sutil de desplazamiento con rebote de pasos, reposo y orientación horizontal según la dirección.
+- La animación es económica: no crea sprites nuevos por fotograma ni depende de librerías externas.
+- Las misiones ahora amplían el recorrido: abrir el archivo, leer tres fichas, comparar épocas y reunir cinco fuentes.
+- Las lecturas del archivo y los viajes entre épocas alimentan los objetivos de misión.
+- La sincronización recupera el progreso histórico de partidas existentes a partir de fichas ya leídas y épocas visitadas.
+- Las recompensas siguen siendo lúdicas y no representan dinero, salarios ni valores históricos.
