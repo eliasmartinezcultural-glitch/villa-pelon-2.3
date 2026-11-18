@@ -72,3 +72,8 @@ Ver `HISTORIA-Y-FUENTES.md`.
 - `HISTORIA-Y-FUENTES.md`: criterio de verificación histórica.
 
 HTML, CSS y JavaScript sin dependencias externas. Renderizado Canvas 2D. Publicación estática posible mediante GitHub Pages.
+
+
+## Archivo local de San Patricio del Chañar
+
+Se incorpora `chanar-archive.js`, un archivo consultable dentro del juego con fichas sobre el territorio, la historia institucional y la transformación productiva. Cada ficha diferencia su estado documental y enlaza su fuente. La lectura puede registrarse en el cuaderno de la partida.
