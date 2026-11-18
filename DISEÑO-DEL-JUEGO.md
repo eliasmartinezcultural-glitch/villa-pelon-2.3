@@ -170,3 +170,10 @@ La siguiente iteración debe convertir los diálogos en escenas con opciones rea
 La interacción con un habitante abre una conversación con tres temas: el lugar, el trabajo y los recuerdos. Cada tema elegido queda guardado por personaje. Repetir una pregunta no vuelve a premiar el vínculo. Los textos están redactados como ficción y explicitan que no son testimonios ni datos históricos. El nivel de vínculo se refleja en la pantalla de misiones.
 
 La relación es una primera capa narrativa: aún no cambia horarios, rutas ni disponibilidad de misiones por nivel. Esa consecuencia sistémica queda como siguiente hito para evitar una barra decorativa sin efecto real.
+
+
+## Cuarta capa: identidad territorial y archivo consultable
+
+Se incorpora `chanar-archive.js` como catálogo de contenido local separado del motor. El panel Archivo local reúne fichas de territorio, cronología y producción. Cada entrada contiene ID estable, período, etiqueta de certeza, texto, fuente y enlace. El jugador puede registrar lecturas en `archiveReadIds`; el progreso se conserva en el guardado existente.
+
+La primera selección documental se apoya en la reseña oficial municipal de identidad y en el documento del Consejo Federal de Inversiones sobre el valle inferior del río Neuquén. Las escenas interactivas de chacras, riego, cosecha y vendimia serán recreaciones jugables; no deben atribuirse a personas reales ni ubicarse con precisión hasta validar fuentes y cartografía.
