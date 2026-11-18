@@ -227,3 +227,9 @@ Esta iteración mejora la base responsive, pero no reemplaza las pruebas física
 - El agua se recupera parcialmente al comenzar un nuevo día de juego; las semillas se recuperan al cosechar.
 - La cosecha se refleja en el inventario, la economía lúdica y dos misiones nuevas.
 - Las parcelas y sus tiempos son una simulación educativa; no describen una chacra real ni prácticas históricas verificadas.
+
+
+## Iteración v13 — compatibilidad y guardado
+- Se incrementa la versión del esquema de respaldo para identificar la incorporación de parcelas y recursos.
+- Se refuerza el tamaño táctil mínimo de los botones de interfaz móvil a 44 px cuando el espacio lo permite.
+- Se publica una nueva clave de caché para que los teléfonos soliciten los archivos actualizados.
