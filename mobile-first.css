@@ -86,3 +86,5 @@ button:focus-visible,input:focus-visible{outline:3px solid #355f8b;outline-offse
  .top-actions button{min-width:34px}
  #hint{max-width:calc(100vw - 132px)}
 }
+
+@media(max-width:760px){body{padding:0}#app{height:100dvh;min-height:100dvh}}
