@@ -68,3 +68,14 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [x] Prueba de humo con DOM simulado: inicialización del motor y apertura del panel de misiones.
 - [x] Panel de misiones muestra las cinco misiones y la sección de vínculos.
 - [ ] Completar una partida real para verificar la cadena de misiones, las conversaciones y las recompensas de principio a fin.
+
+
+- [x] HUD móvil de energía y monedas conectado al estado de partida.
+- [x] Tareas diarias rotativas con coste/recompensa configurados en el módulo de mundo.
+- [x] Tarea diaria bloqueada tras completarse y renovada al cambiar de día.
+- [x] Mapa visual esquemático con posición aproximada del jugador y advertencia de no cartografía.
+- [x] Actividad horaria visible al conversar con habitantes.
+- [x] Pregunta especial de vínculo desbloqueable al alcanzar tres puntos.
+- [ ] Prueba manual en Android de lectura del HUD en 320 px y paisaje.
+- [ ] Completar las cinco variantes de tarea en cinco días de juego.
+- [ ] Verificar el desbloqueo de pregunta especial en partida nueva e importada.
