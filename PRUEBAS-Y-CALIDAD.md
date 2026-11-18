@@ -103,3 +103,16 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [ ] Probar visualmente animación y legibilidad en teléfonos de baja resolución.
 - [ ] Completar la cadena de cuatro misiones en una partida nueva.
 - [ ] Verificar que una partida antigua no duplique recompensas al sincronizar.
+
+
+## v12 — parcelas y ciclo productivo
+- [x] Tres parcelas incorporadas al mapa y excluidas de la época anterior.
+- [x] Estado individual de parcela guardado por ID.
+- [x] Sembrar, regar, crecimiento por reloj del juego y cosechar.
+- [x] Recursos de semillas y agua visibles en el HUD móvil.
+- [x] Recuperación diaria de agua y reposición de semilla tras cosechar.
+- [x] Cosechas conectadas con inventario, monedas y misiones.
+- [x] Migración de partidas antiguas con valores seguros para el nuevo sistema.
+- [ ] Completar una cosecha real en navegador móvil.
+- [ ] Verificar persistencia de las tres parcelas tras cerrar y reabrir.
+- [ ] Probar agotamiento y recuperación de agua y semillas.
