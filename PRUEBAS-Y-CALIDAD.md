@@ -92,3 +92,14 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [ ] Prueba física en Android vertical y horizontal.
 - [ ] Prueba física en iPhone vertical y horizontal.
 - [ ] Prueba de lectura y controles con personas mayores y niños.
+
+
+## v11 — movimiento y misiones investigativas
+- [x] Movimiento actualiza el estado de animación del protagonista.
+- [x] Sprite principal orienta su lectura hacia la dirección horizontal del movimiento.
+- [x] Misiones conectadas con fichas efectivamente leídas en el archivo.
+- [x] Misiones conectadas con cambios de época.
+- [x] Recuperación de progreso previo para lecturas y épocas ya visitadas.
+- [ ] Probar visualmente animación y legibilidad en teléfonos de baja resolución.
+- [ ] Completar la cadena de cuatro misiones en una partida nueva.
+- [ ] Verificar que una partida antigua no duplique recompensas al sincronizar.
