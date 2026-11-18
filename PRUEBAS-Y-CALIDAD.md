@@ -58,3 +58,9 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [x] Pantalla de misiones y vínculos accesible desde la interfaz.
 - [ ] Probar todas las cadenas de misiones con una partida nueva y una partida importada.
 - [ ] Probar recompensas únicas, límite diario de vínculo y cambios de día en móvil.
+
+- [x] Conversaciones con tres temas elegibles por habitante.
+- [x] Temas conversados guardados por personaje.
+- [x] Repetir un tema no vuelve a sumar puntos de relación.
+- [x] Salida clara de la conversación y regreso al juego.
+- [ ] Verificar diálogos y controles de panel con lector de pantalla y pantallas pequeñas.
