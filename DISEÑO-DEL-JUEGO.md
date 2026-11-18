@@ -216,3 +216,14 @@ Esta iteración mejora la base responsive, pero no reemplaza las pruebas física
 - Las lecturas del archivo y los viajes entre épocas alimentan los objetivos de misión.
 - La sincronización recupera el progreso histórico de partidas existentes a partir de fichas ya leídas y épocas visitadas.
 - Las recompensas siguen siendo lúdicas y no representan dinero, salarios ni valores históricos.
+
+
+## Iteración v12 — parcelas y ciclo de cultivo jugable
+- Se incorporan tres parcelas ilustradas y visibles en las épocas de presente y transformación; desaparecen de la escena anterior para no sugerir que esa infraestructura existía allí.
+- Cada parcela conserva su estado: vacía, sembrada, regada, en crecimiento y lista para cosechar.
+- La acción contextual permite sembrar, regar, consultar el crecimiento y cosechar sin abrir menús complejos.
+- El tiempo de crecimiento usa minutos del reloj del juego, no días reales: permite observar el ciclo durante una sesión breve.
+- Semillas, reserva de agua, cosechas y recompensas se guardan en la partida.
+- El agua se recupera parcialmente al comenzar un nuevo día de juego; las semillas se recuperan al cosechar.
+- La cosecha se refleja en el inventario, la economía lúdica y dos misiones nuevas.
+- Las parcelas y sus tiempos son una simulación educativa; no describen una chacra real ni prácticas históricas verificadas.
