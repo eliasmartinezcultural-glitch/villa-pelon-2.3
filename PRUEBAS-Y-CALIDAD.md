@@ -64,3 +64,7 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [x] Repetir un tema no vuelve a sumar puntos de relación.
 - [x] Salida clara de la conversación y regreso al juego.
 - [ ] Verificar diálogos y controles de panel con lector de pantalla y pantallas pequeñas.
+
+- [x] Prueba de humo con DOM simulado: inicialización del motor y apertura del panel de misiones.
+- [x] Panel de misiones muestra las cinco misiones y la sección de vínculos.
+- [ ] Completar una partida real para verificar la cadena de misiones, las conversaciones y las recompensas de principio a fin.
