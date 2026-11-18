@@ -177,3 +177,20 @@ La relación es una primera capa narrativa: aún no cambia horarios, rutas ni di
 Se incorpora `chanar-archive.js` como catálogo de contenido local separado del motor. El panel Archivo local reúne fichas de territorio, cronología y producción. Cada entrada contiene ID estable, período, etiqueta de certeza, texto, fuente y enlace. El jugador puede registrar lecturas en `archiveReadIds`; el progreso se conserva en el guardado existente.
 
 La primera selección documental se apoya en la reseña oficial municipal de identidad y en el documento del Consejo Federal de Inversiones sobre el valle inferior del río Neuquén. Las escenas interactivas de chacras, riego, cosecha y vendimia serán recreaciones jugables; no deben atribuirse a personas reales ni ubicarse con precisión hasta validar fuentes y cartografía.
+
+
+## Tercera capa: actividad contextual y lectura espacial
+
+- El mapa del juego ahora presenta un esquema visual del mundo, posición aproximada del viajero, río ilustrativo, caminos y zonas de arboleda. Está rotulado como mapa de la maqueta, nunca como cartografía histórica.
+- El galpón ofrece una tarea diaria rotativa: ordenar herramientas, preparar cajones, revisar un canal ilustrativo, clasificar cosecha o acomodar materiales. Cada tarea tiene descripción, coste de energía y recompensa diferenciados. Son actividades de juego, no atribuciones históricas.
+- Las conversaciones muestran la actividad horaria actual del personaje. Al alcanzar tres puntos de vínculo se desbloquea una pregunta especial sobre la memoria del pueblo.
+- El HUD móvil informa energía y monedas sin obligar a abrir el mapa.
+
+## Reglas de economía y ritmo
+
+1. Una tarea diaria no debe repetirse como recompensa infinita dentro del mismo día.
+2. Cada actividad informa antes de ejecutarse su coste y recompensa.
+3. El jugador debe tener alternativas claras para recuperar energía.
+4. La economía es lúdica y no simula salarios ni precios históricos reales.
+5. Los vínculos desbloquean contenido narrativo, no alteran los hechos históricos.
+6. Los mapas de interfaz deben indicar si son esquemáticos o georreferenciados; este mapa es esquemático.
