@@ -233,3 +233,15 @@ Esta iteración mejora la base responsive, pero no reemplaza las pruebas física
 - Se incrementa la versión del esquema de respaldo para identificar la incorporación de parcelas y recursos.
 - Se refuerza el tamaño táctil mínimo de los botones de interfaz móvil a 44 px cuando el espacio lo permite.
 - Se publica una nueva clave de caché para que los teléfonos soliciten los archivos actualizados.
+
+
+## Iteración v14 — integración efectiva del motor
+- Se reemplaza el avance variable por simulación de paso fijo (60 actualizaciones por segundo) con acumulador, delta máximo y límite de recuperación de pasos.
+- El bucle se detiene cuando la pestaña pasa a segundo plano y se reinicia al volver; no sigue dibujando innecesariamente en segundo plano.
+- El teclado deja de disparar acciones mientras el foco está en campos de texto y evita interacciones repetidas por mantener una tecla presionada.
+- El joystick captura el puntero y restablece su estado también al perder la captura.
+- El objetivo cercano actualiza el mensaje de ayuda y la etiqueta accesible del botón de acción: el jugador recibe una indicación contextual real.
+- La mochila ahora expone semillas, agua, cosechas y estado de cada parcela; no se limita a listar objetos.
+- La siembra y el riego quedan separados temporalmente: el crecimiento empieza al regar, no antes.
+- La normalización de partidas migra estados de parcelas previos y evita recursos/estados inválidos.
+- Se sincronizan misiones históricas al recuperar una partida, evitando que el progreso quede desconectado hasta abrir el panel.
