@@ -245,3 +245,12 @@ Esta iteración mejora la base responsive, pero no reemplaza las pruebas física
 - La siembra y el riego quedan separados temporalmente: el crecimiento empieza al regar, no antes.
 - La normalización de partidas migra estados de parcelas previos y evita recursos/estados inválidos.
 - Se sincronizan misiones históricas al recuperar una partida, evitando que el progreso quede desconectado hasta abrir el panel.
+
+
+## Iteración v15 — cierre de integración del runtime
+- La versión del guardado pasa a esquema 6.
+- Se normalizan colecciones, épocas, posición, parcelas, semillas, agua y fichas del archivo al recuperar partidas.
+- Se reanuda el bucle también al volver desde caché de navegación del navegador.
+- El render inicial se ejecuta antes de mostrar diálogos y paneles, para que el mundo no aparezca vacío detrás de ellos.
+- La densidad de píxeles interna del canvas se limita a 1,5 en pantallas móviles y 1,75 en pantallas mayores.
+- El cuerpo móvil no agrega padding inferior duplicado; los controles ya contemplan las áreas seguras.
