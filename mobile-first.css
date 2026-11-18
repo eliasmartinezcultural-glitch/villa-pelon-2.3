@@ -1,0 +1,71 @@
+/* Diseño mobile-first: el juego ocupa el espacio útil y los controles nunca dependen de hover. */
+:root{color-scheme:light}
+html,body{min-height:100%;overscroll-behavior:none}
+body{ -webkit-text-size-adjust:100%; }
+#app{height:100vh;height:100dvh;min-height:0;overflow:hidden}
+header{flex:0 0 auto;min-width:0}
+.top-actions{min-width:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;white-space:nowrap}
+.top-actions::-webkit-scrollbar{display:none}
+.top-actions button{flex:0 0 auto}
+main{min-height:0;min-width:0}
+#game-wrap{min-height:0;min-width:0;isolation:isolate}
+canvas{touch-action:none;user-select:none;-webkit-user-select:none}
+button,input{touch-action:manipulation}
+button:focus-visible,input:focus-visible{outline:3px solid #355f8b;outline-offset:2px}
+#panel-overlay{overscroll-behavior:contain}
+#panel-content{overflow-wrap:anywhere}
+@media(max-width:760px){
+ html,body{width:100%;height:100%;overflow:hidden}
+ #app{height:100vh;height:100dvh}
+ header{height:calc(54px + env(safe-area-inset-top));min-height:calc(54px + env(safe-area-inset-top));padding-left:max(7px,env(safe-area-inset-left));padding-right:max(7px,env(safe-area-inset-right));gap:5px}
+ .brand{flex:0 1 auto;max-width:43%;gap:6px}
+ .brand h1{max-width:clamp(78px,28vw,150px);font-size:clamp(9px,2.6vw,12px);line-height:1.15}
+ .top-actions{flex:1 1 auto;justify-content:flex-end;max-width:57%;padding:2px 0}
+ .top-actions button{min-width:39px;min-height:42px;padding:5px 7px;font-size:10px;border-radius:10px}
+ main{padding:0;gap:0}
+ #game-wrap{border:0;border-radius:0;box-shadow:none;width:100%;height:100%;overflow:hidden}
+ #hint{max-width:min(42vw,175px);font-size:10px;line-height:1.25}
+ #mobile-hud{top:7px;right:7px;gap:3px}
+ #mobile-hud span{font-size:9px;padding:5px 6px;max-width:82px}
+ #mobile-status{top:42px;right:7px;width:108px;padding:6px 7px}
+ #mobile-status small{font-size:9px}
+ #stick{left:max(12px,env(safe-area-inset-left));bottom:calc(12px + env(safe-area-inset-bottom));width:108px;height:108px}
+ #stick-knob{left:33px;top:33px;width:38px;height:38px}
+ #interact{right:max(14px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:66px;height:66px}
+ #sprint{right:24px;bottom:calc(94px + env(safe-area-inset-bottom));width:48px;height:48px}
+ /* El diálogo queda por encima del paisaje, pero deja libres joystick y acción. */
+ #dialogue{left:50%;bottom:calc(94px + env(safe-area-inset-bottom));width:min(560px,calc(100% - 18px));max-height:34dvh;overflow:auto;padding:11px 12px}
+ #dialogue p{font-size:14px;line-height:1.4;max-height:none;overflow:visible}
+ #dialogue button{min-height:44px}
+ #toast{bottom:calc(18px + env(safe-area-inset-bottom));max-width:calc(100% - 28px);font-size:12px}
+ #panel-overlay{padding:0;align-items:stretch;justify-content:stretch}
+ #panel-overlay .modal{width:100%;height:100%;max-height:100%;border:0;border-radius:0;padding:calc(14px + env(safe-area-inset-top)) max(15px,env(safe-area-inset-right)) calc(18px + env(safe-area-inset-bottom)) max(15px,env(safe-area-inset-left))}
+ #panel-overlay .modal>div:first-child{position:sticky;top:0;background:#f4eddd;padding:4px 0 10px;z-index:2}
+ #panel-content{padding-bottom:18px}
+ #start{padding:10px}
+ #start .modal{max-height:calc(100dvh - 20px);padding:18px 16px calc(18px + env(safe-area-inset-bottom))}
+ #start .modal-actions{position:sticky;bottom:0;background:#f4eddd;padding-top:10px}
+ #begin{width:100%;min-height:50px}
+}
+@media(max-width:360px){
+ .brand-mark{display:none}
+ .brand{max-width:38%}
+ .top-actions{max-width:62%}
+ .top-actions button{min-width:36px;padding:4px 5px;font-size:9px}
+ #mobile-status{width:98px}
+}
+@media(orientation:landscape) and (max-height:500px){
+ header{height:calc(42px + env(safe-area-inset-top));min-height:calc(42px + env(safe-area-inset-top))}
+ #hint{top:6px;left:7px;max-width:150px}
+ #mobile-hud{top:5px}
+ #mobile-status{top:37px}
+ #stick{width:82px;height:82px;left:9px;bottom:calc(8px + env(safe-area-inset-bottom))}
+ #stick-knob{left:23px;top:23px;width:34px;height:34px}
+ #interact{width:54px;height:54px;right:12px;bottom:calc(8px + env(safe-area-inset-bottom))}
+ #sprint{width:40px;height:40px;right:18px;bottom:calc(66px + env(safe-area-inset-bottom))}
+ #dialogue{left:50%;bottom:calc(68px + env(safe-area-inset-bottom));max-height:42dvh;width:min(620px,70vw);padding:8px 12px}
+ #dialogue p{font-size:12px;margin-bottom:5px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
