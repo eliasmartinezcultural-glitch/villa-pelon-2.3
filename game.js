@@ -93,11 +93,11 @@ function npcResponse(n,topic){
  return answers[topic]||'Me alegra que sigamos conversando. Cada pregunta abre una nueva posibilidad.';
 }
 function showNpcOptions(n){
- const rel=relationshipFor(n.name),topics=state.npcTopics[n.name]||[];
+ const rel=relationshipFor(n.name),topics=Array.isArray(state.npcTopics[n.name])?state.npcTopics[n.name]:[];
  const buttons=[['place','Preguntar por el lugar'],['work','Preguntar por el trabajo'],['memory','Preguntar por los recuerdos']].map(([id,label])=>'<button data-topic="'+id+'">'+label+(topics.includes(id)?' ✓':'')+'</button>').join('');
  openPanel('Conversación con '+n.name,'<p><b>'+escapeHtml(n.role)+'</b></p><p>'+escapeHtml(n.text)+'</p><p class="muted">Esta conversación es una recreación ficticia, no un testimonio histórico.</p><h3>¿Qué querés preguntarle?</h3><div class="choices">'+buttons+'</div><p><b>Vínculo:</b> '+relationshipLevel(rel.points)+' · '+rel.points+'/10</p><button id="npc-goodbye">Despedirse</button>');
  $('panel-content').querySelectorAll('[data-topic]').forEach(btn=>btn.onclick=()=>{
-  const topic=btn.dataset.topic,seen=state.npcTopics[n.name]||[];
+  const topic=btn.dataset.topic,seen=Array.isArray(state.npcTopics[n.name])?state.npcTopics[n.name]:[];
   if(!seen.includes(topic)){
    state.npcTopics[n.name]=seen.concat(topic);
    rel.points=Math.min(10,rel.points+1);
