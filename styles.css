@@ -66,3 +66,17 @@ button{min-height:42px;touch-action:manipulation;-webkit-tap-highlight-color:tra
 .mission-track span{display:block;height:100%;background:#7f9874;border-radius:8px}
 .mission-card small{font:11px Arial,sans-serif;color:#777966}
 @media(max-width:380px){.top-actions button{font-size:9px;padding:4px 3px}.brand h1{max-width:95px}}
+
+/* Estado del jugador: lectura rápida en pantallas táctiles */
+#mobile-status{display:none}
+.energy-track{height:8px;background:#ded5c2;border-radius:9px;overflow:hidden}
+.energy-track span{display:block;height:100%;width:100%;background:#718f6d;border-radius:9px;transition:width .15s}
+.archive-read:disabled{opacity:.65}
+.map-visual{display:block;width:100%;height:auto;max-height:310px;background:#e5e0c8;border:1px solid #c8bea7;border-radius:14px;margin:10px 0}
+.map-legend{display:flex;gap:12px;flex-wrap:wrap;font:11px Arial,sans-serif;color:#626958}
+.map-legend span{display:inline-flex;align-items:center;gap:5px}
+.map-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#a45e42}
+@media(max-width:760px){
+ #mobile-status{display:grid;position:absolute;z-index:3;right:9px;top:46px;width:118px;gap:4px;padding:7px 9px;background:#f4eddded;border:1px solid #c9bea8;border-radius:12px;pointer-events:none;box-shadow:0 2px 8px #27372a20}
+ #mobile-status small{font:10px Arial,sans-serif;color:#465b49}
+}
