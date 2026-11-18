@@ -5,7 +5,7 @@ const canvas=document.getElementById('world'),ctx=canvas.getContext('2d');
 const $=id=>document.getElementById(id);const sprites={};const spriteFiles={hero:'assets/hero.svg',Amalia:'assets/amalia.svg',Tomás:'assets/tomas.svg',Rosa:'assets/rosa.svg',house:'assets/house.svg',barn:'assets/barn.svg',tree:'assets/tree.svg',well:'assets/well.svg',table:'assets/table.svg'};Object.entries(spriteFiles).forEach(([name,src])=>{const img=new Image();img.onload=()=>{sprites[name]=img};img.src=src});
 const TILE=48, COLS=42, ROWS=32;
 let W=0,H=0,dpr=1,cam={x:0,y:0},keys={},touch={x:0,y:0,sprint:false},last=0,toastTimer,lastSave=0;
-const state={started:false,name:'Viajero',skin:0,shirt:'#b66d4c',x:9*TILE,y:14*TILE,dir:0,era:0,discoveries:[],memories:[],visited:new Set(),dialogue:null,questStep:0,money:12,day:1,inventory:[],placesVisited:[],paused:false,saveVersion:2,clock:480,regionsVisited:[],currentRegion:'',worldDay:1,worldWeather:'',worldSeason:'',lastDayNotice:0,energy:100,dailyWorkDay:1,dailyWorkCount:0,missionProgress:{},completedMissions:[],relationships:{},socialDaily:{},totalJobsCompleted:0};
+const state={started:false,name:'Viajero',skin:0,shirt:'#b66d4c',x:9*TILE,y:14*TILE,dir:0,era:0,discoveries:[],memories:[],visited:new Set(),dialogue:null,questStep:0,money:12,day:1,inventory:[],placesVisited:[],paused:false,saveVersion:2,clock:480,regionsVisited:[],currentRegion:'',worldDay:1,worldWeather:'',worldSeason:'',lastDayNotice:0,energy:100,dailyWorkDay:1,dailyWorkCount:0,missionProgress:{},completedMissions:[],relationships:{},socialDaily:{},npcTopics:{},npcChoices:{},totalJobsCompleted:0};
 const {eras,npcs,objects,worldObjects}=window.GameData;const missionCatalog=window.ProgressionData.missions;
 function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0)}
 new ResizeObserver(resize).observe(canvas);resize();
@@ -41,6 +41,8 @@ function normalizeProgressState(){
  state.completedMissions=Array.isArray(state.completedMissions)?state.completedMissions:[];
  state.relationships=state.relationships&&typeof state.relationships==='object'?state.relationships:{};
  state.socialDaily=state.socialDaily&&typeof state.socialDaily==='object'?state.socialDaily:{};
+ state.npcTopics=state.npcTopics&&typeof state.npcTopics==='object'?state.npcTopics:{};
+ state.npcChoices=state.npcChoices&&typeof state.npcChoices==='object'?state.npcChoices:{};
  state.totalJobsCompleted=Number.isInteger(state.totalJobsCompleted)?Math.max(0,state.totalJobsCompleted):0;
 }
 function missionProgressValue(m){const v=state.missionProgress[m.id];return Math.max(0,Math.min(m.goal,Number.isFinite(v)?v:0))}
@@ -82,16 +84,45 @@ function relationshipFor(name){
  return state.relationships[name];
 }
 function relationshipLevel(points){return points>=6?'Amistad':points>=3?'Confianza':points>=1?'Buen trato':'Sin conocer';}
+function npcResponse(n,topic){
+ const answers={
+  place:'Cada rincón tiene una historia posible. Para saber qué ocurrió de verdad necesitamos documentos, fotografías identificadas y relatos contrastados. Lo que te cuento forma parte de esta recreación.',
+  work:'El trabajo cotidiano también construye un lugar: organizar herramientas, cuidar materiales, aprender y colaborar. Esta escena es ficticia y no describe un empleo histórico concreto.',
+  memory:'Los recuerdos ayudan a formular preguntas, pero conviene anotar quién cuenta cada historia, cuándo la recuerda y qué documentos pueden acompañarla.'
+ };
+ return answers[topic]||'Me alegra que sigamos conversando. Cada pregunta abre una nueva posibilidad.';
+}
+function showNpcOptions(n){
+ const rel=relationshipFor(n.name),topics=state.npcTopics[n.name]||[];
+ const buttons=[['place','Preguntar por el lugar'],['work','Preguntar por el trabajo'],['memory','Preguntar por los recuerdos']].map(([id,label])=>'<button data-topic="'+id+'">'+label+(topics.includes(id)?' ✓':'')+'</button>').join('');
+ openPanel('Conversación con '+n.name,'<p><b>'+escapeHtml(n.role)+'</b></p><p>'+escapeHtml(n.text)+'</p><p class="muted">Esta conversación es una recreación ficticia, no un testimonio histórico.</p><h3>¿Qué querés preguntarle?</h3><div class="choices">'+buttons+'</div><p><b>Vínculo:</b> '+relationshipLevel(rel.points)+' · '+rel.points+'/10</p><button id="npc-goodbye">Despedirse</button>');
+ $('panel-content').querySelectorAll('[data-topic]').forEach(btn=>btn.onclick=()=>{
+  const topic=btn.dataset.topic,seen=state.npcTopics[n.name]||[];
+  if(!seen.includes(topic)){
+   state.npcTopics[n.name]=seen.concat(topic);
+   rel.points=Math.min(10,rel.points+1);
+   notify('Conociste un poco más a '+n.name);
+  }
+  state.npcChoices[n.name]=topic;
+  persist();
+  showNpcAnswer(n,topic,seen.includes(topic));
+ });
+ $('npc-goodbye').onclick=()=>{$('panel-overlay').style.display='none';state.paused=false};
+}
+function showNpcAnswer(n,topic,already){
+ const rel=relationshipFor(n.name),answer=npcResponse(n,topic);
+ openPanel('Una charla con '+n.name,'<p>'+escapeHtml(answer)+'</p><p class="muted">'+(already?'Ya habías conversado sobre este tema.':'Tu pregunta quedó guardada en la historia de esta partida.')+'</p><p><b>Vínculo:</b> '+relationshipLevel(rel.points)+' · '+rel.points+'/10</p><div class="choices"><button id="npc-again" class="primary">Hacer otra pregunta</button><button id="npc-goodbye">Despedirse</button></div>');
+ $('npc-again').onclick=()=>showNpcOptions(n);
+ $('npc-goodbye').onclick=()=>{$('panel-overlay').style.display='none';state.paused=false};
+}
 function talkTo(n){
  const rel=relationshipFor(n.name),today=state.worldDay||1;
  const fresh=rel.lastDay!==today;
  if(fresh){rel.points=Math.min(10,rel.points+1);rel.talks++;rel.lastDay=today;registerMissionEvent('talk',n.name);syncMissionHistory()}
- const level=relationshipLevel(rel.points);
- const line=rel.points>=6?'Te saluda con confianza.':rel.points>=3?'Se nota que ya hay cierta confianza.':'Cada encuentro ayuda a conocerse.';
- const extra=fresh?' Hoy compartieron una conversación y el vínculo creció.':' Ya conversaron hoy; podés volver mañana para seguir construyendo el vínculo.';
- say(n.name+' · '+n.role,line+' '+window.WorldSystems.npcGreeting(n.activity,state.clock)+' '+n.text+extra+' Vínculo: '+level+' ('+rel.points+'/10).');
  persist();
+ showNpcOptions(n);
 }
+
 function openMissions(){
  syncMissionHistory();
  const cards=missionCatalog.map(m=>{
