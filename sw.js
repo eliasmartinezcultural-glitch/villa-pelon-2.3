@@ -1,4 +1,4 @@
-const CACHE='viajero-chanar-v11-movimiento-misiones';
+const CACHE='viajero-chanar-v12-cultivos';
 const FILES=['./','./index.html','./styles.css','./mobile-first.css','./game-data.js','./world-systems.js','./progression-data.js','./chanar-archive.js','./game.js','./manifest.webmanifest','./icon.svg','./assets/hero.svg','./assets/amalia.svg','./assets/tomas.svg','./assets/rosa.svg','./assets/house.svg','./assets/barn.svg','./assets/tree.svg','./assets/well.svg','./assets/table.svg'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
