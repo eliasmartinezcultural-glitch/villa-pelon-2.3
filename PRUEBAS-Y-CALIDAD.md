@@ -123,3 +123,18 @@ No se considera confirmada la publicación de GitHub Pages hasta abrir la URL de
 - [x] Objetivos táctiles principales con altura mínima de 44 px en móvil.
 - [x] Caché versionada para forzar la actualización de recursos.
 - [ ] Confirmar actualización del service worker en Android e iOS.
+
+
+## v14 — motor y conexión de sistemas
+- [x] Simulación desacoplada del refresco de pantalla mediante paso fijo de 1/60 s.
+- [x] Límite de delta y de pasos de recuperación para evitar saltos.
+- [x] Bucle suspendido en segundo plano y reanudado al volver.
+- [x] Teclas de juego ignoradas cuando se escribe en campos.
+- [x] Acción de teclado protegida contra repetición involuntaria.
+- [x] Joystick con captura y liberación segura del puntero.
+- [x] Mensaje de interacción y etiqueta accesible según objetivo cercano.
+- [x] Inventario conectado al estado de recursos y parcelas.
+- [x] Crecimiento de cultivo comienza después del riego.
+- [x] Migración de estado y sincronización de misiones al cargar.
+- [ ] Probar movimiento táctil y cosecha en dispositivo físico.
+- [ ] Medir fluidez en teléfonos de gama baja.
