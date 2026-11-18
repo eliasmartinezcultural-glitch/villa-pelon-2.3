@@ -122,3 +122,11 @@ Cada actualización debe mejorar al menos una de estas dimensiones sin perjudica
 - continuidad y profundidad de la aventura.
 
 No se agregan funciones por cantidad. Se agregan sistemas que se conectan y generan situaciones interesantes.
+
+
+## 12. Reglas para conversaciones y vínculos
+- Las conversaciones deben ofrecer opciones comprensibles, no solo texto automático.
+- Cada tema conversado debe poder recordarse y no otorgar recompensas infinitas al repetirse.
+- Los niveles de relación necesitan consecuencias reales antes de ser presentados como sistema profundo.
+- Los personajes ficticios deben identificarse como recreaciones; no atribuirles recuerdos, citas o experiencias de vecinos reales.
+- Las elecciones pueden modificar la historia personal del protagonista, nunca reescribir hechos históricos.
